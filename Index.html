@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Integrated Master Map — CAPTCHA & KRS</title>
+<style>
+:root{--bg:#07111f;--card:#0e1b2d;--card2:#12243a;--text:#eef6ff;--muted:#a8b8cc;--cyan:#5eead4;--blue:#60a5fa;--red:#fb7185;--yellow:#fbbf24;--line:#263c56}
+*{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+.navbtns{display:flex;gap:10px}.navbtn{display:inline-flex;align-items:center;gap:6px;border:1px solid #315271;background:#0c1a2c;color:#d5e8fb;border-radius:99px;padding:8px 16px;font-size:12px;font-weight:700;text-decoration:none;cursor:pointer;transition:background .15s}.navbtn:hover{background:#13263d}.navbtn.disabled{opacity:.35;pointer-events:none}
+body{overflow-y:auto}.deck{width:100%}.slide{min-height:100vh;height:auto;padding:55px clamp(28px,7vw,90px) 70px;position:relative;border-bottom:1px solid #16283e;display:flex;flex-direction:column;justify-content:flex-start}
+.kicker{color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px;margin-bottom:12px}
+h1{font-size:clamp(40px,5.5vw,68px);line-height:1.02;margin:0 0 18px}h2{font-size:clamp(30px,4vw,44px);margin:0 0 25px}h3{margin:0 0 8px;font-size:19px}
+p{color:var(--muted);font-size:16px;line-height:1.6}.lead{font-size:21px;max-width:920px}
+.badge{display:inline-block;border:1px solid #315271;background:#0c1a2c;border-radius:99px;padding:8px 13px;font-size:12px;margin:4px;color:#d5e8fb}
+.grid{display:grid;gap:18px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:linear-gradient(145deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 18px 45px #0003}
+.num{font-size:11px;font-weight:900;letter-spacing:1.5px;color:var(--cyan);margin-bottom:9px}
+.callout{margin-top:20px;padding:19px 21px;border-left:4px solid var(--cyan);background:#5eead40c;border-radius:0 14px 14px 0;color:#d9fffa;line-height:1.55}
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:9px;margin:20px 0}.node{flex:1 1 150px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px}.node b{font-size:14px}.node span{display:block;color:var(--muted);font-size:12px;margin-top:5px}.arrow{display:flex;align-items:center;color:var(--blue);font-size:22px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden}th,td{padding:14px;border-bottom:1px solid var(--line);text-align:left;font-size:14px;line-height:1.45}th{background:#13263d;color:#cceaff}.high{color:var(--red);font-weight:800}
+.finding{border:1px solid #fb718555;background:#fb71850e;border-radius:18px;padding:24px}.reco{border:1px solid #5eead455;background:#5eead40d;border-radius:18px;padding:24px}
+.quote{font-size:28px;line-height:1.3;font-weight:750;max-width:1050px;margin:28px 0}
+.footer{margin-top:auto;padding-top:35px;color:#637994;font-size:11px;display:flex;justify-content:space-between}
+.small{font-size:13px;color:var(--muted)}hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+@media(max-width:800px){.g2,.g3{grid-template-columns:1fr}.slide{padding:38px 24px 55px}.chain{display:grid;grid-template-columns:1fr}.arrow{display:none}.quote{font-size:23px}}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<section class="slide">
+<div class="kicker">Integrated Master Map • Studi Kasus</div>
+<h1>CAPTCHA KRS:<br><span style="color:var(--cyan)">Security Control vs Accessibility</span></h1>
+<p class="lead">Bagaimana satu hambatan pada proses <b>war KRS</b> mahasiswa netra dapat ditelusuri dari stakeholder need sampai menjadi audit finding dan recommendation.</p>
+<div><span class="badge">COBIT 2019</span><span class="badge">IT Governance</span><span class="badge">Accessibility</span><span class="badge">IT Audit</span></div>
+<div class="callout"><b>Gagasan utama:</b> CAPTCHA bukan sekadar fitur teknis. Ketika kontrol keamanan menghambat akses layanan akademik bagi sebagian stakeholder, persoalannya naik menjadi isu governance I&T.</div>
+<div class="footer"><span>MASTER MAP</span><span>01</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">1 • Why COBIT?</div><h2>Masalahnya adalah governance, bukan sekadar bug</h2>
+<div class="grid g3">
+<div class="card"><div class="num">VALUE</div><h3>Nilai layanan</h3><p>Layanan KRS harus memberi akses akademik yang efektif dan setara kepada stakeholder.</p></div>
+<div class="card"><div class="num">RISK</div><h3>Risiko</h3><p>Hambatan akses dapat berkembang menjadi risiko layanan, reputasi, hukum, dan ketidaksetaraan.</p></div>
+<div class="card"><div class="num">RESOURCES</div><h3>Sumber daya</h3><p>Desain sistem, proses requirement, kompetensi tim, dan aplikasi perlu dioptimalkan untuk seluruh pengguna.</p></div>
+</div>
+<p class="quote">“CAPTCHA menjadi titik masuk untuk menilai apakah I&T benar-benar menciptakan <span style="color:var(--cyan)">value–risk–resources balance</span>.”</p>
+<div class="footer"><span>COBIT 2019 • ENTERPRISE GOVERNANCE OF I&T</span><span>02</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">2–4 • COBIT Foundation</div><h2>Prinsip dan sudut pandang audit</h2>
+<div class="grid g2">
+<div class="card"><div class="num">COBIT 2019</div><h3>Kerangka holistic</h3><p>COBIT digunakan bukan sebagai checklist keamanan, tetapi untuk menelusuri apakah governance dan management memastikan layanan KRS dirancang secara inklusif.</p></div>
+<div class="card"><div class="num">PRINCIPLE</div><h3>Provide Stakeholder Value</h3><p>Mahasiswa netra adalah stakeholder. Nilai “akses setara” belum tercapai ketika kontrol membuat mereka tidak dapat menggunakan layanan secara efektif.</p></div>
+<div class="card"><div class="num">PRINCIPLE</div><h3>Holistic Approach</h3><p>Gap bisa berada pada process, policy, information, application, maupun people/competency—bukan hanya testing.</p></div>
+<div class="card"><div class="num">GOVERNANCE VS MANAGEMENT</div><h3>Arah vs pelaksanaan</h3><p><b>Governance:</b> apakah pimpinan menetapkan dan memonitor prioritas aksesibilitas? <br><b>Management:</b> apakah requirement tersebut benar-benar masuk ke spesifikasi dan desain KRS?</p></div>
+</div>
+<div class="callout">Ini penting: akar masalah dapat berada pada level governance bila universitas belum pernah menetapkan arah aksesibilitas digital sebagai bagian dari governance I&T.</div>
+<div class="footer"><span>PRINCIPLES → GOVERNANCE → MANAGEMENT</span><span>03</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">5 • Stakeholder Needs & Goals Cascade</div><h2>Dari kebutuhan mahasiswa ke tujuan enterprise</h2>
+<div class="chain">
+<div class="node"><b>Stakeholder Need</b><span>Verifikasi anti-bot tidak boleh menghalangi akses mahasiswa netra pada KRS kompetitif.</span></div><div class="arrow">→</div>
+<div class="node"><b>EG05</b><span>Customer-oriented service culture.</span></div><div class="arrow">→</div>
+<div class="node"><b>AG01</b><span>I&T compliance & support for business compliance.</span></div><div class="arrow">→</div>
+<div class="node"><b>AG06</b><span>Agility to turn business requirements into operational solutions.</span></div>
+</div>
+<div class="callout"><b>Narasi cascade:</b> kebutuhan spesifik mahasiswa netra bukan isu TI semata. Ia terhubung ke kepatuhan, kualitas layanan, dan kemampuan organisasi menerjemahkan kebutuhan bisnis menjadi solusi operasional.</div>
+<div class="footer"><span>STAKEHOLDER → EG → AG</span><span>04</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">6–8 • Objective Universe & Design Factors</div><h2>Mengapa BAI menjadi titik fokus?</h2>
+<div class="grid g2">
+<div class="card"><div class="num">COBIT CORE MODEL</div><h3>BAI — Build, Acquire & Implement</h3><p>Kasus diarahkan ke BAI karena masalah utamanya muncul dari requirement dan desain solusi: kebutuhan aksesibilitas seharusnya dipikirkan sebelum solusi dibangun.</p></div>
+<div class="card"><div class="num">DESIGN FACTORS</div><h3>Faktor pembentuk prioritas</h3><p>• Compliance requirements<br>• Enterprise goals<br>• Risk profile<br>• Role of IT<br><br>KRS adalah layanan kritikal yang menentukan akses pendidikan.</p></div>
+<div class="card"><div class="num">7 COMPONENTS</div><h3>Telusuri komponen, bukan langsung menyalahkan process</h3><p><b>Information:</b> requirement belum terdokumentasi.<br><b>Policies:</b> standar aksesibilitas belum memadai.<br><b>People:</b> kompetensi accessibility mungkin kurang.<br><b>Applications:</b> CAPTCHA tidak menyediakan opsi non-visual.</p></div>
+<div class="card"><div class="num">INSIGHT</div><h3>Gap bersifat multi-komponen</h3><p>Perbaikan yang hanya mengganti CAPTCHA belum tentu menyelesaikan akar masalah jika requirement, policy, competency, dan QA tetap tidak berubah.</p></div>
+</div>
+<div class="footer"><span>DESIGN FACTORS → GOVERNANCE SYSTEM</span><span>05</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">9 • Anatomy of the Objective</div><h2>Objective yang dipilih: BAI02</h2>
+<div class="reco">
+<div class="num">BAI02 — MANAGED REQUIREMENTS DEFINITION</div>
+<h3 style="font-size:25px">BAI02.01 — Define and maintain business functional and technical requirements</h3>
+<p>Fokusnya adalah memastikan kebutuhan fungsional, teknis, dan kebutuhan non-fungsional—termasuk aksesibilitas—diidentifikasi sebelum solusi dibangun.</p>
+</div>
+<div class="grid g3" style="margin-top:20px">
+<div class="card"><div class="num">WHY</div><h3>Requirement</h3><p>Accessibility harus menjadi requirement, bukan tambahan setelah sistem selesai.</p></div>
+<div class="card"><div class="num">SUPPORTING</div><h3>BAI03</h3><p>Build/acquire solution untuk memastikan requirement diterjemahkan ke desain dan implementasi.</p></div>
+<div class="card"><div class="num">QUALITY</div><h3>APO11</h3><p>Quality management membantu memastikan accessibility masuk ke quality assurance.</p></div>
+</div>
+<div class="footer"><span>OBJECTIVE → PRACTICE</span><span>06</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">10 • Performance Management</div><h2>Menilai capability: di mana gap-nya?</h2>
+<table><thead><tr><th>Kondisi requirement accessibility</th><th>Interpretasi capability</th></tr></thead>
+<tbody>
+<tr><td>Tidak pernah didefinisikan sama sekali</td><td class="high">Level 0 — Incomplete</td></tr>
+<tr><td>Ada, tetapi tidak konsisten diterapkan pada semua fitur</td><td>Level 1 — Performed</td></tr>
+<tr><td>Target organisasi misalnya Level 2–3</td><td>Harus ada proses yang lebih terkelola dan konsisten</td></tr>
+</tbody></table>
+<div class="grid g2" style="margin-top:20px">
+<div class="card"><div class="num">EVIDENCE — IMAGE 1</div><h3>Halaman login SIMASTER UGM</h3><img src="Image 1.jpeg" alt="CAPTCHA pada halaman login SIMASTER UGM menyediakan tombol Play untuk alternatif audio" style="width:100%;border-radius:12px;border:1px solid var(--line);margin-top:6px"><p style="margin-top:10px">CAPTCHA menyediakan tombol <b>“Play”</b> sebagai alternatif audio, sehingga masih memberi jalur verifikasi bagi pengguna yang tidak dapat membaca CAPTCHA visual.</p></div>
+<div class="card"><div class="num">EVIDENCE — IMAGE 2</div><h3>Form kuesioner/survei di menu lain</h3><img src="Image 2.jpeg" alt="CAPTCHA pada form kuesioner SIMASTER UGM hanya berupa gambar visual tanpa opsi audio" style="width:100%;border-radius:12px;border:1px solid var(--line);margin-top:6px"><p style="margin-top:10px">Pada fitur lain (pengisian kuesioner), CAPTCHA hanya berupa gambar visual tanpa opsi audio maupun alternatif non-visual apa pun.</p></div>
+</div>
+<div class="callout"><b>Gap audit:</b> bila requirement aksesibilitas tidak didefinisikan atau tidak konsisten diterapkan, target capability belum tercapai. Gap inilah yang nantinya diterjemahkan menjadi finding. Perbandingan Image 1 vs Image 2 di atas menjadi bukti konkret bahwa penerapan alternatif aksesibilitas CAPTCHA <b>tidak konsisten</b> antarfitur dalam sistem yang sama.</div>
+<div class="footer"><span>CAPABILITY → GAP</span><span>07</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">11–12 • From COBIT to IT Audit</div><h2>Criteria → Scope → Test</h2>
+<div class="grid g2">
+<div class="card"><div class="num">AUDIT CRITERIA</div><h3>BAI02.01</h3><p>Requirement sistem KRS seharusnya mencakup kebutuhan aksesibilitas pengguna disabilitas, termasuk mekanisme verifikasi anti-bot yang kompatibel dengan teknologi asistif.</p><hr><div class="num">SCOPE</div><p><b>Management view:</b> BAI02 sebagai objective utama; BAI03 sebagai pendukung build/desain; APO11 sebagai pendukung quality.</p></div>
+<div class="card"><div class="num">EVIDENCE & TESTING</div><h3>Apa yang harus diperiksa?</h3><p>• Requirement/SRS KRS<br>• SOP & kebijakan accessibility<br>• Desain CAPTCHA<br>• Hasil uji screen reader<br>• Log/tiket keluhan<br>• Wawancara mahasiswa netra & pengelola TI<br>• Bukti QA sebelum KRS</p><div class="callout"><b>Test question:</b> “Apakah mahasiswa netra dapat menyelesaikan kontrol secara mandiri, tepat waktu, dan tanpa kehilangan fungsi yang tersedia bagi pengguna lain?”</div></div>
+</div>
+<div class="footer"><span>AUDIT CRITERIA → EVIDENCE → TESTING</span><span>08</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">13 • From Practice to Finding</div><h2>Contoh audit finding</h2>
+<div class="finding">
+<div class="num" style="color:var(--red)">FINDING</div>
+<p style="color:#f7dfe4;font-size:19px">Kontrol anti-bot pada proses KRS telah diterapkan untuk mengurangi risiko penggunaan bot, namun mekanisme CAPTCHA belum sepenuhnya menjamin aksesibilitas bagi mahasiswa tunanetra. Kondisi tersebut berpotensi menyebabkan keterlambatan saat pengambilan kelas dengan kuota terbatas.</p>
+</div>
+<table style="margin-top:20px"><thead><tr><th>Elemen</th><th>Isi</th></tr></thead><tbody>
+<tr><td><b>Criteria</b></td><td>Requirement KRS seharusnya mencakup accessibility, termasuk mekanisme verifikasi non-visual bagi pengguna screen reader.</td></tr>
+<tr><td><b>Condition</b></td><td>Sistem hanya menyediakan CAPTCHA visual tanpa alternatif fungsional yang benar-benar dapat digunakan mahasiswa netra.</td></tr>
+<tr><td><b>Cause</b></td><td>Requirement definition tidak melibatkan kelompok pengguna disabilitas dan belum mengacu secara memadai pada standar accessibility.</td></tr>
+<tr><td><b>Effect / Risk</b></td><td>Mahasiswa netra berpotensi kehilangan kesempatan memperoleh kelas berkuota terbatas; muncul risiko diskriminasi layanan dan ketidakpatuhan regulasi.</td></tr>
+</tbody></table>
+<div class="footer"><span>CRITERIA → CONDITION → CAUSE → EFFECT</span><span>09</span></div>
+</section>
+
+<section class="slide">
+<div class="kicker">14 • Recommendation</div><h2>Recommendation: jangan hanya “hapus CAPTCHA”</h2>
+<div class="grid g2">
+<div class="reco"><div class="num">JANGKA PENDEK</div><h3>Mitigasi cepat</h3><p>Sediakan mekanisme verifikasi alternatif non-visual yang kompatibel dengan screen reader sebagai mitigasi pada sistem yang sudah berjalan.</p></div>
+<div class="reco"><div class="num">JANGKA MENENGAH</div><h3>Requirement & build</h3><p>Revisi BAI02.01 agar requirement wajib mencakup accessibility; teruskan ke BAI03 untuk memastikan desain dan implementasi diuji dengan assistive technology sebelum rilis.</p></div>
+<div class="reco"><div class="num">JANGKA PANJANG</div><h3>Governance</h3><p>Dorong EDM01 agar universitas menetapkan accessibility digital sebagai bagian dari arah strategis governance I&T.</p></div>
+<div class="reco"><div class="num">BERKELANJUTAN</div><h3>Quality assurance</h3><p>Masukkan accessibility testing ke APO11 sebagai bagian standar quality assurance sebelum fitur sistem akademik dirilis.</p></div>
+</div>
+<div class="callout"><b>Prinsip desain:</b> jangan menukar security dengan accessibility. Targetnya adalah <b>security control yang tetap efektif sekaligus accessible</b>.</div>
+<div class="footer"><span>RECOMMENDATION</span><span>10</span></div>
+</section>
+
+</div>
+</body>
+</html>
